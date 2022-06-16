@@ -1,48 +1,59 @@
+import brophyPic from '../img/products/girlBrophy.webp';
+import mcCrankPic from '../img/products/girlMcCrank.webp';
+import maltoPic from '../img/products/girlMalto.webp';
+import sectionPic from '../img/products/elementSection.webp';
+
+
 //factory function to product object for each item
-const product = (name, pic, description, type, brand, price, id, featured=false) => {
-    return { name, pic, description, type, brand, price, id, featured };
+const product = (name, pic, description, type, brand, price, inStock, id, featured=false) => {
+    return { name, pic, description, type, brand, price, inStock, id, featured };
 };
 
 const girlBrophy93 = new product(
     'Girl Brophy 93 Til Deck',
-    'picture',
+    brophyPic,
     '8.25 x 31.75',
     'deck',
     'girl',
     49.98,
-    1,
+    'Yes',
+    101,
+    true
 )
 
 const girlMcCrank = new product(
     'Girl McCrank International OG Deck',
-    'pic',
+    mcCrankPic,
     '8.25 x 31.75',
     'deck',
     'girl',
     49.98,
-    2,
-
+    'Yes',
+    102,
+    true
 )
 
 const girlMalto = new product(
     'Girl Malto 93 Til Pop Secret Deck',
-    'pic',
+    maltoPic,
     '8.0 x 31.875',
     'deck',
     'girl',
     59.98,
-    3,
-
+    'Yes',
+    103,
+    true
 )
 
 const elementSection = new product(
     'Element Section Black Deck',
-    'pic',
+    sectionPic,
     '8.0 x 31.75',
     'deck',
     'element',
     56.99,
-    4,
+    'Yes',
+    104,
 
 )
 
