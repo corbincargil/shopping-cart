@@ -9,7 +9,7 @@ export default function ProductDisplay() {
             {
             products.map((product) => (
                 <li 
-                    className='featured product' 
+                    className='product' 
                     key={product.id}>
                     <div className="flip-container">
                         <div className="product-picture">
@@ -24,7 +24,6 @@ export default function ProductDisplay() {
                     <p className="name">{product.name}</p>
                     <p className="description">{product.description}</p>
                     <p className="price">Price: ${product.price}</p>
-                    <p className="new-price">${Math.floor(product.price*0.75)}.99</p>
                 </li>
             ))
             }
