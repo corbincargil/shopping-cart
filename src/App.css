@@ -38,6 +38,7 @@ li {
 } */
 
 .header .links {
+  margin: 0 10px 0 0;
   width: clamp(150px,20%,200px);
   display: flex;
   justify-content: space-between;
@@ -159,20 +160,29 @@ li {
                                         /* SHOP */
 .main-shop-container {
   display: grid;
-  grid-template-columns: 13% 85%;
+  grid-template-columns: minmax(100px,15%) 85%;
+  column-gap: 10px;
 }
 .product-display ul {
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns:repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
   row-gap: 10px;
-  column-gap: 2%;
+  column-gap: 1%;
   justify-items: center;
 }
 
 .product-display li {
   list-style: none;
+}
+
+.product-navigation {
+  margin: 0 0 0 15px;
+  padding: 0 10px;
+  height: 470px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .product-navigation ul {
@@ -182,5 +192,81 @@ li {
 
 .product-navigation li {
   padding: 5px 0px;
+}
 
+                                        /* MEDIA QUERIES */
+
+@media only screen and (max-width: 1200px) {
+  .product-display ul {
+  grid-template-columns:repeat(3, 1fr);
+  }
+  .product-navigation {
+    height: 525px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .featured-items .product img {
+    width: 125px;
+  }
+
+  .featured-items li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 150px;
+  }
+  .featured-items .flip-container{
+    height: 200px;
+  }
+  .featured-items .product-picture,
+  .featured-items .front,
+  .featured-items .back {
+    width: 225px;
+    height: 300px;
+  }
+
+  .product-navigation {
+    height: 750px;
+  }
+  .product-display ul {
+  grid-template-columns:repeat(2, 1fr);
+
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .home-background{
+    background-image: none;
+    height: 1750px;
+  }
+  .featured-items .product {
+    width: 260px;
+    height: 550px;
+  }
+  .featured-items .product img {
+    width: 225px;
+    height: 300px;
+  }
+  .featured-items ul {
+    grid-template-columns: 1fr;
+  }
+  .featured-items .flip-container{
+    height: 300px;
+  }
+  .main-shop-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-display ul {
+  grid-template-columns:repeat(1, 1fr);
+  }
+  .product-navigation {
+    margin: 10px;
+    padding-left: 10%;
+    width: 50vw;
+    height: 500px;
+  }
 }
