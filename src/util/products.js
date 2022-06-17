@@ -28,6 +28,21 @@ import trucksPic from '../img/products/trucks.webp';
 import trucksPicBack from '../img/products/trucksBack.webp';
 import wheelsPic from '../img/products/wheels.webp';
 import wheelsPicBack from '../img/products/wheelsBack.webp';
+import lukePic from '../img/products/lukeShirt.webp';
+import lukePicBack from '../img/products/lukeShirtBack.webp';
+import enjoiShirtPic from '../img/products/enjoiShirt.webp';
+import enjoiShirtPicBack from '../img/products/enjoiShirtBack.webp';
+import volcomShirtPic from '../img/products/volcomShirt.webp';
+import volcomShirtPicBack from '../img/products/volcomShirtBack.webp';
+import volcomStarShirtPic from '../img/products/volcomStarShirt.webp';
+import volcomStarShirtPicBack from '../img/products/volcomStarShirtBack.webp';
+import girlShirtPic from '../img/products/girlShirt.webp';
+import girlShirtPicBack from '../img/products/girlShirtBack.webp';
+import girlHoodiePic from '../img/products/girlHoodie.webp';
+import girlHoodiePicBack from '../img/products/girlHoodieBack.webp';
+import nikeBeaniePic from '../img/products/nikeBeanie.webp';
+import volcomSocksPic from '../img/products/volcomSocks.webp';
+import volcomSocksPicBack from '../img/products/volcomSocksBack.webp';
 
 
 
@@ -233,4 +248,108 @@ const wheels = new product(
     
 )
 
-export const products = [girlBrophy93, girlMcCrank, girlMalto, elementSection, elementQuadrant,enjoiWhitey,enjoiSpectrum,planBButterfly,planBMummy,toyMachineEye,toyMachineFace,zeroSkull,zeroBold,trucks,wheels];
+const lukeShirt = new product(
+    'DC x Star Wars Luke T-Shirt',
+    lukePic,
+    lukePicBack,
+    '"Out of this world!" ',
+    'merch',
+    'dc',
+    34.00,
+    'Yes',
+    301,
+    
+)
+
+const enjoiShirt = new product(
+    'Enjoi Classic Panda T-Shirt',
+    enjoiShirtPic,
+    enjoiShirtPicBack,
+    '100% cotton, classic-fit',
+    'merch',
+    'enjoi',
+    19.95,
+    'Yes',
+    302,
+    
+)
+
+const volcomShirt = new product(
+    'Volcom Winged Beast T-Shirt',
+    volcomShirtPic,
+    volcomShirtPicBack,
+    '100% cotton, classic-fit',
+    'merch',
+    'volcom',
+    25.00,
+    'Yes',
+    303,
+    
+)
+
+const volcomStarShirt = new product(
+    'Volcom Star Shields T-Shirt',
+    volcomStarShirtPic,
+    volcomStarShirtPicBack,
+    'Maximum comfort',
+    'merch',
+    'volcom',
+    28.00,
+    'Yes',
+    304,
+    
+)
+
+const girlShirt = new product(
+    'Girl Tokyo Speed Longsleeve Shirt',
+    girlShirtPic,
+    girlShirtPicBack,
+    'Tokyo Speed',
+    'merch',
+    'girl',
+    32.00,
+    'Yes',
+    305,
+    
+)
+
+const girlHoodie = new product(
+    'Girl Tokyo Speed Hoodie',
+    girlHoodiePic,
+    girlHoodiePicBack,
+    'Tokyo Speed',
+    'merch',
+    'girl',
+    80.00,
+    'Yes',
+    306,
+    
+)
+
+const nikeBeanie = new product(
+    'Nike SB Fisherman Beanie',
+    nikeBeaniePic,
+    nikeBeaniePic,
+    '60% polyester/40% acrylic',
+    'merch',
+    'nike',
+    25.00,
+    'Yes',
+    307,
+    
+)
+
+const volcomSocks = new product(
+    'Volcom Vibes Socks',
+    volcomSocksPic,
+    volcomSocksPicBack,
+    '...What socks?',
+    'merch',
+    'volcom',
+    10.00,
+    'Yes',
+    308,
+    
+)
+
+export const products = [girlBrophy93, girlMcCrank, girlMalto, elementSection, elementQuadrant,enjoiWhitey,enjoiSpectrum,planBButterfly,planBMummy,toyMachineEye,toyMachineFace,zeroSkull,zeroBold,trucks,wheels,lukeShirt,enjoiShirt,volcomShirt,volcomStarShirt,girlShirt,girlHoodie,nikeBeanie,volcomSocks];

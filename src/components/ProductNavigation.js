@@ -13,12 +13,15 @@ export default function ProductNavigation() {
             <h3>Browse by brand:</h3>
             <ul className="navigation">
                 <li>Ace</li>
+                <li>DC</li>
                 <li>Element</li>
                 <li>Enjoi</li>
                 <li>Girl</li>
+                <li>Nike</li>
                 <li>Plan B</li>
                 <li>Spitfire</li>
                 <li>Toy Machine</li>
+                <li>Volcom</li>
                 <li>Zero</li>
             </ul>
         </div>
