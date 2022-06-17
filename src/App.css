@@ -62,6 +62,15 @@ li {
   transition: .7s;
 }
 
+#cart-icon {
+  width: 24px;
+}
+#cart-icon:hover {
+  margin-right: 3px;
+  background-color: white;
+  border: 1px solid black;
+}
+
 
                                         /* HOME */
 
