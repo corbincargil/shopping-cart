@@ -12,11 +12,12 @@ export default function ProductNavigation() {
             </ul>
             <h3>Browse by brand:</h3>
             <ul className="navigation">
-                <li>Birdhouse</li>
+                <li>Ace</li>
                 <li>Element</li>
                 <li>Enjoi</li>
                 <li>Girl</li>
                 <li>Plan B</li>
+                <li>Spitfire</li>
                 <li>Toy Machine</li>
                 <li>Zero</li>
             </ul>
