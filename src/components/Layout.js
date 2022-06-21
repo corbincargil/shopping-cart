@@ -7,6 +7,7 @@ import Shop from "../pages/Shop";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useState } from "react";
+import { products } from "../util/products";
 
 export default function Layout() {
     const [cartItems, setCartItems] = useState([]);
@@ -19,7 +20,11 @@ export default function Layout() {
             <Routes>
                 <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
-                <Route path="Shop" element={<Shop setCartItems={setCartItems}/>} />
+                <Route path="Shop" element={
+                    <Shop 
+                    cartItems={cartItems} 
+                    setCartItems={setCartItems}/>} 
+                    />
             </Routes>
             <Footer/>
         </BrowserRouter>

@@ -5,7 +5,8 @@ import { products } from "../util/products";
 import { useState } from "react";
 
 
-export default function Shop() {
+export default function Shop(props) {
+    const {cartItems, setCartItems} = props;
     const [filterBy, setFilterBy] = useState(null);
     const [filterWord, setFilterWord] = useState(null);
     const [productsDisplayed, setProductsDisplayed] = useState(() => products);
@@ -21,6 +22,8 @@ export default function Shop() {
         />
         <ProductDisplay 
             productsDisplayed={productsDisplayed}
+            cartItems={cartItems}
+            setCartItems={setCartItems}
         />
         </div>
     )

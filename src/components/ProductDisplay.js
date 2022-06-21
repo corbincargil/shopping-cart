@@ -1,6 +1,17 @@
 import React from "react";
+import { useEffect } from "react";
 
 export default function ProductDisplay(props) {
+    const {cartItems, setCartItems} = props;
+
+    function addToCart(item) {
+        console.log(`clicked on item: ${item.name}`)
+        setCartItems(prevCart => [...prevCart, item])
+    }
+
+    useEffect(() => {
+        //setCartItems(cartItems)
+    }, [cartItems])
 
     return(
         <div className="product-display">
@@ -23,6 +34,7 @@ export default function ProductDisplay(props) {
                     <p className="name">{product.name}</p>
                     <p className="description">{product.description}</p>
                     <p className="price">Price: ${product.price}</p>
+                    <button className="button" id={product.id} onClick={() => {addToCart(product)}}>Add to cart</button>
                 </li>
             ))
             }
