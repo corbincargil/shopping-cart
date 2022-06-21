@@ -1,13 +1,12 @@
 import React from "react";
-import { products } from "../util/products";
 
+export default function ProductDisplay(props) {
 
-export default function ProductDisplay() {
     return(
         <div className="product-display">
             <ul>
             {
-            products.map((product) => (
+                props.productsDisplayed.map((product) => (
                 <li 
                     className='product' 
                     key={product.id}>
