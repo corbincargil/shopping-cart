@@ -9,10 +9,6 @@ export default function ProductDisplay(props) {
         setCartItems(prevCart => [...prevCart, item])
     }
 
-    useEffect(() => {
-        //setCartItems(cartItems)
-    }, [cartItems])
-
     return(
         <div className="product-display">
             <ul>
