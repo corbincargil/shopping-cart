@@ -5,8 +5,8 @@ export default function Cart(props) {
 
 
     function removeFromCart(item) {
+        //neeed to try removing by passing the key or id for the item as an argument
         console.log(`Revmoving from cart: ${item.name}`)
-        setCartItems(prevCart => console.log(prevCart))
     }
 
     function decrementQuantity(quantity) {
