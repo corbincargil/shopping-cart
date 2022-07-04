@@ -39,12 +39,6 @@ button{
   width: clamp(150px, 20%, 200px);
 }
 
-/* .header h1 {
-  font-size: 4rem;
-  font-family: 'Dancing Script', cursive;
-  justify-self: right;
-} */
-
 .header .links {
   margin: 0 10px 0 0;
   width: clamp(150px,20%,200px);
@@ -59,19 +53,19 @@ button{
 }
 
 .header .links a:hover {
-  background-color: black;
-  color: white;
+ color: white;
+  background-color: rgb(207, 76, 0);
   transform: scale(1.2);
   transition: .7s;
 }
 
 #cart-icon {
+  margin: 2px;
   width: 24px;
 }
 #cart-icon:hover {
-  margin-right: 3px;
-  background-color: white;
-  border: 1px solid black;
+  margin: 2px;
+  border: 1px solid rgb(207, 76, 0);
 }
 
 
@@ -213,26 +207,14 @@ button{
 }
 
                                         /* CART */
-.hidden {
-  display: none;
-}
-
-.cart-background {
-  margin: 0;
-  padding: 0 0 0 2000px;
-  background-color: rgba(128, 128, 128, 0.307);
-  backdrop-filter: blur(2px);
-  z-index: 5;
-  position: fixed;
-  top: 60px;
-  right: 0px;
-  height: 100vh;
+.cart-background{
+  display: flex;
+  justify-content: center;
 }
 
 .cart-container{
-  padding-top: 10px;
-  background-color: white;
-  width: 375px;
+  padding: 10px;
+  background-color: rgb(211, 211, 211);
 }
 
 .cart-container ul {
@@ -241,27 +223,34 @@ button{
 }
 
 .product.in-cart {
-  padding: 0;
-  border-bottom: 1px solid black;
-  margin-bottom: 10px;
+  margin: 8px;
+  padding: 10;
+  border: 1px solid black;
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
   font-size: 12px;
   box-shadow: none;
 }
 
-.quantity{
-  width: 30px;
+.info{
+  width: 105px;
+}
+.quantity-container{
+  display: flex;
+  justify-content: space-between;
+}
+.in-cart p.name{
+  margin-bottom: 20px;
 }
 
 .in-cart img {
-  width: 80px;
+  width: 100px;
 }
 
 .in-cart .product-picture {
-  width: 80px;
+  width: 100px;
   height: auto;
 }
 
@@ -308,6 +297,12 @@ button{
 }
 
 @media only screen and (max-width: 800px) {
+  .header{
+    height: 36px;
+  }
+  .logo{
+    display: none;
+  }
   .home-background{
     background-image: none;
     height: 1750px;

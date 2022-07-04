@@ -16,8 +16,11 @@ export default function Layout() {
         <div className="layout">
         <BrowserRouter>
             <Header/>
-            <Cart cartItems={cartItems}/>
             <Routes>
+                <Route path="cart" element={
+                    <Cart 
+                    cartItems={cartItems}
+                    setCartItems={setCartItems}/>} />
                 <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="Shop" element={

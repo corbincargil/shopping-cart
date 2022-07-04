@@ -10,8 +10,7 @@ export default function Header() {
 
     return(
         <div className="header">
-            <img src={mainLogo} alt="main-logo" />
-            {/* <h1>{title}</h1> */}
+            <img className="logo" src={mainLogo} alt="main-logo" />
             <div className="links">
                 <Link to="/cart"><img id="cart-icon" src={cartIcon} alt="cart-icon" /></Link>
                 <Link to="/">Home</Link> 

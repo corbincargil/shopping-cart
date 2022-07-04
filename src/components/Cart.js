@@ -14,7 +14,7 @@ export default function Cart(props) {
     }
 
     return (
-      <div className="cart-background ">
+      <div className="cart-background">
         <div className="cart-container">
             <ul>
                 {
