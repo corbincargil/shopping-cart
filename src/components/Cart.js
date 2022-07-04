@@ -1,10 +1,20 @@
 import React from "react";
 
 export default function Cart(props) {
+    const {cartItems, setCartItems} = props;
 
+
+    function removeFromCart(item) {
+        console.log(`Revmoving from cart: ${item.name}`)
+        setCartItems(prevCart => console.log(prevCart))
+    }
+
+    function decrementQuantity(quantity) {
+        quantity--;
+    }
 
     return (
-      <div className="cart-background hidden">
+      <div className="cart-background ">
         <div className="cart-container">
             <ul>
                 {
@@ -15,8 +25,17 @@ export default function Cart(props) {
                             <div className="product-picture">
                                 <img src={product.pic} alt={product.name}/>
                             </div>
-                        <p className="name">{product.name}</p>
-                        <p className="price">Price: ${product.price}</p>
+                        <div className="info">
+                            <p className="name">{product.name}</p>
+                            <div className="quantity-container">
+                                <button onClick={() => decrementQuantity(product.quantity)}>-</button>
+                                {product.quantity}
+                                <button>+</button>
+                            </div>
+                        </div>
+                        
+                        <p className="price">Price: ${product.price*product.quantity}</p>
+                        <button className="remove-button" onClick={() => {removeFromCart(product)}}>X</button>
                     </li>
                 ))
                 }

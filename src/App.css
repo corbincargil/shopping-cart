@@ -15,6 +15,9 @@ a:-webkit-any-link {
 li {
   list-style: none;
 }
+button{
+  cursor: pointer;
+}
 
                                         /* HEADER */
 .header {
@@ -206,9 +209,14 @@ li {
 
 .product-navigation li {
   padding: 5px 0px;
+  cursor: pointer;
 }
 
                                         /* CART */
+.hidden {
+  display: none;
+}
+
 .cart-background {
   margin: 0;
   padding: 0 0 0 2000px;
@@ -221,18 +229,33 @@ li {
   height: 100vh;
 }
 
+.cart-container{
+  padding-top: 10px;
+  background-color: white;
+  width: 375px;
+}
+
 .cart-container ul {
   margin: 0;
   padding: 0;
 }
 
 .product.in-cart {
+  padding: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 10px;
-  align-items: baseline;
+  align-items: center;
   font-size: 12px;
+  box-shadow: none;
 }
+
+.quantity{
+  width: 30px;
+}
+
 .in-cart img {
   width: 80px;
 }

@@ -5,7 +5,8 @@ export default function ProductDisplay(props) {
     const {cartItems, setCartItems} = props;
 
     function addToCart(item) {
-        console.log(`clicked on item: ${item.name}`)
+        console.log(`aded to cart: ${item.name}`)
+        item.quantity = 1;
         setCartItems(prevCart => [...prevCart, item])
     }
 
