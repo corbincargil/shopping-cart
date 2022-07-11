@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/footer.css"
 
 export default function Footer() {
     return(
@@ -14,9 +15,9 @@ export default function Footer() {
             <div className="about column">
                 <h3>Skate Warehouse</h3>
                 <ul>
-                    <li><a href="./">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/about">FAQ</a></li>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>FAQ</li>
                 </ul>
             </div>
             <div className="shop column">
