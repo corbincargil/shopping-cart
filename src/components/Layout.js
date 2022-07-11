@@ -17,6 +17,7 @@ export default function Layout() {
         <BrowserRouter>
             <Header/>
             <Routes>
+                <Route path="shopping-cart" element={<Home />} />
                 <Route path="cart" element={
                     <Cart 
                     cartItems={cartItems}
