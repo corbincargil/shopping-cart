@@ -3,19 +3,22 @@ import { useState } from "react";
 
 
 export default function CartItem(props) {
-    const {product} = props;
-    const [quantity, setQuantity] = useState(10);
-    const [price, setPrice] = useState(props.price)
+    const {product,price, cartItems, setCartItems} = props;
+    const [quantity, setQuantity] = useState(1);
 
-    function removeFromCart(item) {
-        //neeed to try removing by passing the key or id for the item as an argument
-        console.log(`Revmoving from cart: ${item.name}`)
+    function decrementQuantity() {
+        setQuantity(quantity - 1);
     }
 
-    function decrementQuantity(quantity) {
-        quantity--;
+    function incrementQuantity() {
+        setQuantity(quantity + 1);
     }
 
+    function removeFromCart(itemID) {
+        const newCart = cartItems.filter((item) => item.id != itemID)
+        console.log(`Removing from cart: ${itemID}`)
+        setCartItems(newCart);
+    }
 
     return(
         <div className="cart-item">
@@ -27,14 +30,14 @@ export default function CartItem(props) {
             <div className="info">
                 <p className="name">{product.name}</p>
                 <div className="quantity-container">
-                    <button onClick={() => decrementQuantity(product.quantity)}>-</button>
-                    {product.quantity}
-                    <button>+</button>
+                    <button onClick={() => decrementQuantity()}>-</button>
+                    {quantity}
+                    <button onClick={() => incrementQuantity()}>+</button>
                 </div>
             </div>
             
-            <p className="price">Price: ${product.price*product.quantity}</p>
-            <button className="remove-button" onClick={() => {removeFromCart(product)}}>X</button>
+            <p className="price">Price: ${Math.round(price*quantity*100)/100}</p>
+            <button className="remove-button" onClick={() => {removeFromCart(product.id)}}>X</button>
         </div>
     )
 } 

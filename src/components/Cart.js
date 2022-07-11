@@ -10,10 +10,6 @@ export default function Cart(props) {
         console.log(`Revmoving from cart: ${item.name}`)
     }
 
-    function decrementQuantity(quantity) {
-        quantity--;
-    }
-
     return (
       <div className="cart-background">
         <div className="cart-container">
@@ -23,7 +19,12 @@ export default function Cart(props) {
                     <li 
                         className='product in-cart' 
                         key={product.id}>
-                        <CartItem product={product}/>
+                        <CartItem 
+                            product={product} 
+                            price={product.price}
+                            cartItems={cartItems}
+                            setCartItems={setCartItems}
+                            />
                     </li>
                 ))
                 }
