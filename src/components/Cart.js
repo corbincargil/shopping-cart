@@ -10,9 +10,14 @@ export default function Cart(props) {
         console.log(`Revmoving from cart: ${item.name}`)
     }
 
+    
     return (
       <div className="cart-background">
         <div className="cart-container">
+            {cartItems == 0 && 
+            <h3>
+                Your cart is currently empty!
+            </h3>}
             <ul>
                 {
                     props.cartItems.map((product) => (
