@@ -1,4 +1,5 @@
 import React from "react";
+import CartItem from "./CartItem";
 
 export default function Cart(props) {
     const {cartItems, setCartItems} = props;
@@ -22,20 +23,7 @@ export default function Cart(props) {
                     <li 
                         className='product in-cart' 
                         key={product.id}>
-                            <div className="product-picture">
-                                <img src={product.pic} alt={product.name}/>
-                            </div>
-                        <div className="info">
-                            <p className="name">{product.name}</p>
-                            <div className="quantity-container">
-                                <button onClick={() => decrementQuantity(product.quantity)}>-</button>
-                                {product.quantity}
-                                <button>+</button>
-                            </div>
-                        </div>
-                        
-                        <p className="price">Price: ${product.price*product.quantity}</p>
-                        <button className="remove-button" onClick={() => {removeFromCart(product)}}>X</button>
+                        <CartItem product={product}/>
                     </li>
                 ))
                 }

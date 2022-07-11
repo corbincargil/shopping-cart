@@ -226,12 +226,15 @@ button{
   margin: 8px;
   padding: 10;
   border: 1px solid black;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
   font-size: 12px;
   box-shadow: none;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .info{
