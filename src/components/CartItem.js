@@ -6,7 +6,14 @@ export default function CartItem(props) {
     const {product,price, cartItems, setCartItems} = props;
     const [quantity, setQuantity] = useState(1);
 
+    function removeFromCart(itemID) {
+        const newCart = cartItems.filter((item) => item.id != itemID)
+        console.log(`Removing from cart: ${itemID}`)
+        setCartItems(newCart);
+    }
+
     function decrementQuantity() {
+        if (quantity == 1) {removeFromCart(product.id)}
         setQuantity(quantity - 1);
     }
 
@@ -14,11 +21,6 @@ export default function CartItem(props) {
         setQuantity(quantity + 1);
     }
 
-    function removeFromCart(itemID) {
-        const newCart = cartItems.filter((item) => item.id != itemID)
-        console.log(`Removing from cart: ${itemID}`)
-        setCartItems(newCart);
-    }
 
     return(
         <div className="cart-item">
