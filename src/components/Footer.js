@@ -15,8 +15,8 @@ export default function Footer() {
                 <h3>Skate Warehouse</h3>
                 <ul>
                     <li><a href="./">Home</a></li>
-                    <li><a href="./about">About</a></li>
-                    <li><a href="./about">FAQ</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/about">FAQ</a></li>
                 </ul>
             </div>
             <div className="shop column">
