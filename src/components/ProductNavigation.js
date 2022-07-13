@@ -23,6 +23,8 @@ export default function ProductNavigation(props) {
             setProductsDisplayed(products.filter(filterByBrand))
         } else if (filterBy == 'type') {
             setProductsDisplayed(products.filter(filterByType))
+        } else if (filterBy === "") {
+            setProductsDisplayed(() => products)
         }
     }, [filterBy,filterWord])
 
@@ -30,6 +32,7 @@ export default function ProductNavigation(props) {
         <div className="product-navigation">
             <h3>Browse by product:</h3>
             <ul className="navigation">
+                <li onClick={handleClick} className="" id="">All Items</li>
                 <li onClick={handleClick} className="type" id="deck">Decks</li>
                 <li onClick={handleClick} className="type" id="trucks">Trucks</li>
                 <li onClick={handleClick} className="type" id="wheels">Wheels</li>
@@ -37,6 +40,7 @@ export default function ProductNavigation(props) {
             </ul>
             <h3>Browse by brand:</h3>
             <ul className="navigation">
+                <li onClick={handleClick} className="" id="">All Brands</li>
                 <li onClick={handleClick} className="brand" id="ace">Ace</li>
                 <li onClick={handleClick} className="brand" id="dc">DC</li>
                 <li onClick={handleClick} className="brand" id="element">Element</li>
