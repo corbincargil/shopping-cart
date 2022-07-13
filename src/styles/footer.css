@@ -1,4 +1,6 @@
 .footer {
+    margin: 20px 0px 0px;
+    padding: 0px 10px;
     background-color: gray;
     display: grid;
     grid-template-columns: repeat(4,1fr);
