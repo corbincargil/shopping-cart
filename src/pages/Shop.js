@@ -7,8 +7,8 @@ import { useState } from "react";
 
 export default function Shop(props) {
     const {cartItems, setCartItems} = props;
-    const [filterBy, setFilterBy] = useState(null);
-    const [filterWord, setFilterWord] = useState(null);
+    const [filterBy, setFilterBy] = useState();
+    const [filterWord, setFilterWord] = useState();
     const [productsDisplayed, setProductsDisplayed] = useState(() => products);
 
     return(

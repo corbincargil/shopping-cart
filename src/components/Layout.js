@@ -17,14 +17,13 @@ export default function Layout() {
         <BrowserRouter>
             <Header/>
             <Routes>
-                <Route path="shopping-cart" element={<Home />} />
                 <Route path="cart" element={
                     <Cart 
                     cartItems={cartItems}
                     setCartItems={setCartItems}/>} />
                 <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
-                <Route path="Shop" element={
+                <Route path="shop" element={
                     <Shop 
                     cartItems={cartItems} 
                     setCartItems={setCartItems}/>} 
