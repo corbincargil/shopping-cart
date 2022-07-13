@@ -21,7 +21,7 @@ export default function Layout() {
                     <Cart 
                     cartItems={cartItems}
                     setCartItems={setCartItems}/>} />
-                <Route index element={<Home />} />
+                <Route index path="/" element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="shop" element={
                     <Shop 
