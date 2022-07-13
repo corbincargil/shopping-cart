@@ -23,8 +23,6 @@ export default function ProductNavigation(props) {
             setProductsDisplayed(products.filter(filterByBrand))
         } else if (filterBy == 'type') {
             setProductsDisplayed(products.filter(filterByType))
-        } else {
-            console.log("ERRORITO")
         }
     }, [filterBy,filterWord])
 
