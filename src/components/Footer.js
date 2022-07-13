@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/footer.css"
 
-export default function Footer() {
+export default function Footer(props) {
+    const {filterBy, setFilterBy, filterWord, setFilterWord, setProductsDisplayed} = props;
+
     return(
         <div className="footer">
             <div className="subscribe">

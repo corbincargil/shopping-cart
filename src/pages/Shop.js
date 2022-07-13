@@ -6,10 +6,8 @@ import { useState } from "react";
 
 
 export default function Shop(props) {
-    const {cartItems, setCartItems} = props;
-    const [filterBy, setFilterBy] = useState();
-    const [filterWord, setFilterWord] = useState();
-    const [productsDisplayed, setProductsDisplayed] = useState(() => products);
+    const {cartItems, setCartItems, filterBy, setFilterBy, filterWord, setFilterWord, productsDisplayed, setProductsDisplayed} = props;
+    
 
     return(
         <div className="main-shop-container">

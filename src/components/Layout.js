@@ -11,6 +11,9 @@ import { products } from "../util/products";
 
 export default function Layout() {
     const [cartItems, setCartItems] = useState([]);
+    const [filterBy, setFilterBy] = useState();
+    const [filterWord, setFilterWord] = useState();
+    const [productsDisplayed, setProductsDisplayed] = useState(() => products);
 
     return(
         <div className="layout">
@@ -27,10 +30,23 @@ export default function Layout() {
                 <Route path="/shopping-cart/shop" element={
                     <Shop 
                     cartItems={cartItems} 
-                    setCartItems={setCartItems}/>} 
-                    />
+                    setCartItems={setCartItems}
+                    filterBy={filterBy}
+                    setFilterBy={setFilterBy}
+                    filterWord={filterWord}
+                    setFilterWord={setFilterWord}
+                    productsDisplayed={productsDisplayed}
+                    setProductsDisplayed={setProductsDisplayed}
+                    />} 
+                />
             </Routes>
-            <Footer/>
+            <Footer
+                filterBy={filterBy}
+                setFilterBy={setFilterBy}
+                filterWord={filterWord}
+                setFilterWord={setFilterWord}
+                setProductsDisplayed={setProductsDisplayed}
+            />
         </BrowserRouter>
         </div>
     )
