@@ -12,10 +12,10 @@ export default function Header() {
         <div className="header">
             <Link className="logo-link" to="/"><img className="logo" src={mainLogo} alt="main-logo" /></Link>
             <div className="links">
-                <Link to="/cart"><img id="cart-icon" src={cartIcon} alt="cart-icon" /></Link>
+                <Link to="/shopping-cart//cart"><img id="cart-icon" src={cartIcon} alt="cart-icon" /></Link>
                 <Link to="/">Home</Link> 
-                <Link to="shop">Shop</Link> 
-                <Link to="about">About</Link> 
+                <Link to="/shopping-cart/shop">Shop</Link> 
+                <Link to="/shopping-cart/about">About</Link> 
             </div>
         </div>
     )

@@ -14,16 +14,16 @@ export default function Layout() {
 
     return(
         <div className="layout">
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Header/>
             <Routes>
-                <Route path="cart" element={
+                <Route path="/shopping-cart/cart" element={
                     <Cart 
                     cartItems={cartItems}
                     setCartItems={setCartItems}/>} />
                 <Route index path="/" element={<Home />} />
-                <Route path="about" element={<About />} />
-                <Route path="shop" element={
+                <Route path="/shopping-cart/about" element={<About />} />
+                <Route path="/shopping-cart/shop" element={
                     <Shop 
                     cartItems={cartItems} 
                     setCartItems={setCartItems}/>} 
