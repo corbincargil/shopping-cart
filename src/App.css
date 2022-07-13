@@ -1,8 +1,10 @@
 #root {
+  font-family: 'Raleway', sans-serif;
   --header-text-color: black;
   --header-text-size: 1.3rem;
   --product-bg-color: white;
 }
+
 
 .App {
   text-align: center;
@@ -93,6 +95,7 @@ button{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.36);
   /* -webkit-backdrop-filter: blur(10px); */
   backdrop-filter: blur(2px);
@@ -140,6 +143,23 @@ button{
 
 .product .description {
   color: rgb(110, 110, 110);
+}
+
+.product button {
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  width: 120px;
+  height: 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.product button:hover {
+  background-color: white;
+  color: rgb(207, 76, 0);
+  transition: .3s;
 }
 
 /* Image flips */
@@ -245,6 +265,36 @@ button{
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+}
+
+.cart-item button {
+  margin: 0;
+  padding: 0;
+  color: black;
+  background-color: rgb(224, 224, 224);
+  width: 20px;
+  height: 20px;
+  font-size: 1rem;
+  box-shadow: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.cart-item button:hover {
+  color: rgb(224, 224, 224);
+  background-color: black;
+}
+
+button.remove-button  {
+  color: red;
+  background-color: white;
+  border: none;
+  box-shadow: none;
+}
+
+button.remove-button:hover {
+  color: red;
+  background-color: white;
 }
 
 .info{
