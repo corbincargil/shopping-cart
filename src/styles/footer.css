@@ -1,11 +1,14 @@
 .footer {
-    margin: 20px 0px 0px;
-    padding: 0px 10px;
-    background-color: gray;
+    margin: 40px 0px 0px;
+    padding: 0px 100px 20px;
+    background-color: rgb(235, 235, 235);
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
+.footer .subscribe {
+    margin: 10px
+}
 .footer .column {
     margin: 10px;
     display: flex;
@@ -28,6 +31,32 @@
     text-decoration: underline;
 }
 
+.footer a {
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: rgb(207, 76, 0);
+    transition: .3s;
+}
+
+.footer a:visited {
+    text-decoration: underline;
+}
+
+.footer button {
+    margin-left: 10px;
+    background-color: rgb(207, 76, 0);
+    color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.footer button:hover {
+    background-color: white;
+    color: rgb(207, 76, 0);
+    transition: .3s;
+}
 
 
 

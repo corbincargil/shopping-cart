@@ -211,6 +211,11 @@ button{
   cursor: pointer;
 }
 
+.product-navigation li:hover {
+  color: rgb(207, 76, 0);
+  transition: .3s;
+}
+
                                         /* CART */
 .cart-background{
   display: flex;
@@ -269,7 +274,7 @@ button{
   grid-template-columns:repeat(3, 1fr);
   }
   .product-navigation {
-    height: 650px;
+    height: 700px;
   }
 }
 
@@ -299,7 +304,7 @@ button{
   }
 
   .product-navigation {
-    height: 850px;
+    height: 800px;
   }
   .product-display ul {
   grid-template-columns:repeat(2, 1fr);
@@ -345,6 +350,6 @@ button{
     margin: 10px;
     padding-left: 10%;
     width: 50vw;
-    height: 600px;
+    height: 650px;
   }
 }

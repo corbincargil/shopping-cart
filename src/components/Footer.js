@@ -39,7 +39,7 @@ export default function Footer(props) {
                 </form>
             </div>
             <div className="about column">
-                <h3>Skate Warehouse</h3>
+                <h2>Skate Warehouse</h2>
                 <ul>
                     <Link to="/shopping-cart/"><li onClick={() => window.scrollTo({top:0,left:0, behavior: 'smooth'})}>Home</li></Link>
                     <Link to="/shopping-cart/about"><li onClick={() => window.scrollTo({top:0,left:0, behavior: 'smooth'})}>About</li></Link>
@@ -47,7 +47,7 @@ export default function Footer(props) {
                 </ul>
             </div>
             <div className="shop column">
-            <Link to="/shopping-cart/shop"><h3 onClick={handleClick} className="">Shop</h3></Link>
+            <Link to="/shopping-cart/shop"><h2 onClick={handleClick} className="">Shop</h2></Link>
                 <ul>
                     <Link to="/shopping-cart/shop"><li onClick={handleClick} className="type" id="deck">Decks</li></Link>
                     <Link to="/shopping-cart/shop"><li onClick={handleClick} className="type" id="trucks">Trucks</li></Link>
@@ -56,7 +56,7 @@ export default function Footer(props) {
                 </ul>
             </div>
             <div className="contact column">
-                <h3>Contact</h3>
+                <h2>Contact</h2>
                 <span>corbin.cargil@gmail.com</span>
             </div>
         </div>
