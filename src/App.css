@@ -274,6 +274,9 @@ button{
 }
 
 @media only screen and (max-width: 940px) {
+  .header .links{
+    margin-right: 40px;
+  }
   .featured-items .product img {
     width: 125px;
   }
