@@ -6,15 +6,15 @@ export default function CartItem(props) {
     const {product,price, cartItems, setCartItems, productQuantity, totalCartQuantity, setTotalCartQuantity} = props;
     const [quantity, setQuantity] = useState(productQuantity);
 
-    function removeFromCart(itemID) {
-        const newCart = cartItems.filter((item) => item.id != itemID)
-        console.log(`Removing from cart: ${itemID}`)
+    function removeFromCart(currentItem) {
+        const newCart = cartItems.filter((item) => item.id != currentItem.id)
+        console.log(`Removing from cart: ${currentItem}`)
         setCartItems(newCart);
         setTotalCartQuantity(totalCartQuantity - (quantity))
     }
 
     function decrementQuantity() {
-        if (quantity == 1) {removeFromCart(product.id)}
+        if (quantity == 1) {removeFromCart(product)}
         setQuantity(quantity - 1);
         setTotalCartQuantity(totalCartQuantity - 1);
     }
@@ -42,7 +42,7 @@ export default function CartItem(props) {
             </div>
             
             <p className="price">Price: ${Math.round(price*quantity*100)/100}</p>
-            <button className="remove-button" onClick={() => {removeFromCart(product.id)}}>X</button>
+            <button className="remove-button" onClick={() => {removeFromCart(product)}}>X</button>
         </div>
     )
 } 
