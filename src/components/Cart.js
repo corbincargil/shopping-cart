@@ -2,7 +2,7 @@ import React from "react";
 import CartItem from "./CartItem";
 
 export default function Cart(props) {
-    const {cartItems, setCartItems, setItemQuantity} = props;
+    const {cartItems, setCartItems, setTotalCartQuantity} = props;
     
     return (
       <div className="cart-background">
@@ -13,16 +13,17 @@ export default function Cart(props) {
             </h3>}
             <ul>
                 {
-                    props.cartItems.map((product) => (
+                    cartItems.map((product) => (
                     <li 
                         className='product in-cart' 
                         key={product.id}>
                         <CartItem 
+                            productQuantity={product.quantity}
                             product={product} 
                             price={product.price}
                             cartItems={cartItems}
                             setCartItems={setCartItems}
-                            setItemQuantity={setItemQuantity}
+                            setTotalCartQuantity={setTotalCartQuantity}
                             />
                     </li>
                 ))

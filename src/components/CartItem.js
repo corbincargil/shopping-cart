@@ -3,8 +3,8 @@ import { useState } from "react";
 
 
 export default function CartItem(props) {
-    const {product,price, cartItems, setCartItems} = props;
-    const [quantity, setQuantity] = useState(1);
+    const {product,price, cartItems, setCartItems, productQuantity} = props;
+    const [quantity, setQuantity] = useState(productQuantity);
 
     function removeFromCart(itemID) {
         const newCart = cartItems.filter((item) => item.id != itemID)

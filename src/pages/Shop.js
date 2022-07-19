@@ -6,11 +6,11 @@ import { useEffect } from "react";
 
 
 export default function Shop(props) {
-    const {cartItems, setCartItems, filterBy, setFilterBy, filterWord, setFilterWord, productsDisplayed, setProductsDisplayed, itemQuantity, setItemQuantity} = props;
+    const {cartItems, setCartItems, filterBy, setFilterBy, filterWord, setFilterWord, productsDisplayed, setProductsDisplayed, totalCartQuantity, setTotalCartQuantity} = props;
     
-    useEffect(() => {
-        setItemQuantity(cartItems.length)
-    }, [cartItems])
+    // useEffect(() => {
+    //     setTotalCartQuantity(cartItems.length)
+    // }, [cartItems])
 
     return(
         <div className="main-shop-container">
@@ -25,6 +25,8 @@ export default function Shop(props) {
             productsDisplayed={productsDisplayed}
             cartItems={cartItems}
             setCartItems={setCartItems}
+            totalCartQuantity={totalCartQuantity}
+            setTotalCartQuantity={setTotalCartQuantity}
         />
         </div>
     )

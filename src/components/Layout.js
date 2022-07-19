@@ -14,23 +14,23 @@ export default function Layout() {
     const [filterBy, setFilterBy] = useState();
     const [filterWord, setFilterWord] = useState();
     const [productsDisplayed, setProductsDisplayed] = useState(() => products);
-    const [itemQuantity,setItemQuantity] = useState(0);
+    const [totalCartQuantity,setTotalCartQuantity] = useState(0);
 
 
     return(
         <div className="layout">
         <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Header
-                itemQuantity={itemQuantity}
-                setItemQuantity={setItemQuantity}
+                totalCartQuantity={totalCartQuantity}
+                setTotalCartQuantity={setTotalCartQuantity}
             />
             <Routes>
                 <Route path="/shopping-cart/cart" element={
                     <Cart 
                     cartItems={cartItems}
                     setCartItems={setCartItems}
-                    itemQuantity={itemQuantity}
-                    setItemQuantity={setItemQuantity}
+                    totalCartQuantity={totalCartQuantity}
+                    setTotalCartQuantity={setTotalCartQuantity}
                     />} 
                 />
                 <Route index path="/" element={<Home />} />
@@ -46,8 +46,8 @@ export default function Layout() {
                     setFilterWord={setFilterWord}
                     productsDisplayed={productsDisplayed}
                     setProductsDisplayed={setProductsDisplayed}
-                    itemQuantity={itemQuantity}
-                    setItemQuantity={setItemQuantity}
+                    totalCartQuantity={totalCartQuantity}
+                    setTotalCartQuantity={setTotalCartQuantity}
                     />} 
                 />
             </Routes>

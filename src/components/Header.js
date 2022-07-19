@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 export default function Header(props) {
     const title = 'Skate Warehouse';
-    const {itemQuantity,setItemQuantity} = props;
+    const {totalCartQuantity} = props;
 
 
     return(
@@ -16,7 +16,7 @@ export default function Header(props) {
             <div className="links">
                 <Link className="cart-box" to="/shopping-cart//cart">
                     <img id="cart-icon" src={cartIcon} alt="cart-icon" onClick={() => window.scrollTo({top:0,left:0})}/>
-                    <p className="item-quantity">{itemQuantity}</p>
+                    <p className="item-quantity">{totalCartQuantity}</p>
                 </Link>
                 
                 <Link to="/shopping-cart/" onClick={() => window.scrollTo({top:0,left:0})}>Home</Link> 
