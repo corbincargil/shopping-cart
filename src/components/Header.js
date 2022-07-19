@@ -2,13 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import mainLogo from "../img/skate-warehouse-logo.png";
 import cartIcon from "../img/cart-outline.png";
-import { useEffect } from "react";
 
 
 export default function Header(props) {
     const title = 'Skate Warehouse';
     const {totalCartQuantity} = props;
 
+    const displayQuantity = (number) => {
+        if (number > 0) {
+            return number
+        }
+    }
 
     return(
         <div className="header">
@@ -16,7 +20,7 @@ export default function Header(props) {
             <div className="links">
                 <Link className="cart-box" to="/shopping-cart//cart">
                     <img id="cart-icon" src={cartIcon} alt="cart-icon" onClick={() => window.scrollTo({top:0,left:0})}/>
-                    <p className="item-quantity">{totalCartQuantity}</p>
+                    <p className="item-quantity">{displayQuantity(totalCartQuantity)}</p>
                 </Link>
                 
                 <Link to="/shopping-cart/" onClick={() => window.scrollTo({top:0,left:0})}>Home</Link> 
