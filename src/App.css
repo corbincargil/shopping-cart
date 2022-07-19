@@ -47,7 +47,7 @@ button{
 }
 
 .header .links {
-  margin: 0 10px 0 0;
+  margin: 0 25px 0 0;
   width: clamp(150px,20%,200px);
   display: flex;
   justify-content: space-between;
@@ -84,9 +84,9 @@ button{
   border-radius: 10px;
 }
 
-.item-quantity:hover {
+/* .item-quantity:hover {
   
-}
+} */
 
 .cart-box {
   display: flex;

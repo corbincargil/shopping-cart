@@ -2,14 +2,7 @@ import React from "react";
 import CartItem from "./CartItem";
 
 export default function Cart(props) {
-    const {cartItems, setCartItems} = props;
-
-
-    function removeFromCart(item) {
-        //neeed to try removing by passing the key or id for the item as an argument
-        console.log(`Revmoving from cart: ${item.name}`)
-    }
-
+    const {cartItems, setCartItems, setItemQuantity} = props;
     
     return (
       <div className="cart-background">
@@ -29,6 +22,7 @@ export default function Cart(props) {
                             price={product.price}
                             cartItems={cartItems}
                             setCartItems={setCartItems}
+                            setItemQuantity={setItemQuantity}
                             />
                     </li>
                 ))
