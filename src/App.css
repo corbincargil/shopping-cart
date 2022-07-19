@@ -346,7 +346,7 @@ button.remove-button:hover {
 
 @media only screen and (max-width: 940px) {
   .header .links{
-    margin-right: 40px;
+    margin-right: 70px;
   }
   .featured-items .product img {
     width: 125px;
