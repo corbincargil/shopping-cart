@@ -2,7 +2,7 @@ import React from "react";
 import CartItem from "./CartItem";
 
 export default function Cart(props) {
-    const {cartItems, setCartItems, setTotalCartQuantity} = props;
+    const {cartItems, setCartItems, totalCartQuantity, setTotalCartQuantity} = props;
     
     return (
       <div className="cart-background">
@@ -23,6 +23,7 @@ export default function Cart(props) {
                             price={product.price}
                             cartItems={cartItems}
                             setCartItems={setCartItems}
+                            totalCartQuantity={totalCartQuantity}
                             setTotalCartQuantity={setTotalCartQuantity}
                             />
                     </li>

@@ -3,22 +3,25 @@ import { useState } from "react";
 
 
 export default function CartItem(props) {
-    const {product,price, cartItems, setCartItems, productQuantity} = props;
+    const {product,price, cartItems, setCartItems, productQuantity, totalCartQuantity, setTotalCartQuantity} = props;
     const [quantity, setQuantity] = useState(productQuantity);
 
     function removeFromCart(itemID) {
         const newCart = cartItems.filter((item) => item.id != itemID)
         console.log(`Removing from cart: ${itemID}`)
         setCartItems(newCart);
+        setTotalCartQuantity(totalCartQuantity - (quantity))
     }
 
     function decrementQuantity() {
         if (quantity == 1) {removeFromCart(product.id)}
         setQuantity(quantity - 1);
+        setTotalCartQuantity(totalCartQuantity - 1);
     }
 
     function incrementQuantity() {
         setQuantity(quantity + 1);
+        setTotalCartQuantity(totalCartQuantity + 1);
     }
 
 
