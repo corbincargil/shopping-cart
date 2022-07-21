@@ -32,7 +32,7 @@ export default function ProductDetail(props) {
                         <h2>${product.price}</h2> 
                     </div>
                     <div className="description">
-                        <p>The {name} will make all of your dreams come true. Hands-down the best purchase you could ever make! Buying this product is the first step toward the life you've always watned. What are you waiting for? Go ahead and add this item to the cart! You won't regret it.</p>
+                        <p>The {name} will make all of your dreams come true. Hands-down the best purchase you could ever make! Buying this product is the first step toward the life you've always wanted. What are you waiting for? Go ahead and add this item to the cart! You won't regret it.</p>
                     </div>
                     <div className="reviews">
                         <div className="stars">
