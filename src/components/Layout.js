@@ -52,7 +52,11 @@ export default function Layout() {
                     />}/> 
                 <Route 
                     path="/shopping-cart/shop/:name" 
-                    element={<ProductDetail products={products}/>}
+                    element={<ProductDetail 
+                                totalCartQuantity={totalCartQuantity}
+                                setTotalCartQuantity={setTotalCartQuantity}
+                                setCartItems={setCartItems}
+                                products={products}/>}
                 />
 
             </Routes>
