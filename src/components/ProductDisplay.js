@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function ProductDisplay(props) {
     const {cartItems, setCartItems, totalCartQuantity, setTotalCartQuantity} = props;
@@ -25,6 +26,7 @@ export default function ProductDisplay(props) {
                 <li 
                     className='product' 
                     key={product.id}>
+                    <Link to={`/shopping-cart/shop/${product.name}`}>
                     <div className="flip-container">
                         <div className="product-picture">
                             <div className="front">
@@ -38,6 +40,7 @@ export default function ProductDisplay(props) {
                     <p className="name">{product.name}</p>
                     <p className="description">{product.description}</p>
                     <p className="price">Price: ${product.price}</p>
+                    </Link>
                     <button className="button" id={product.id} onClick={() => {addToCart(product)}}>Add to cart</button>
                 </li>
             ))

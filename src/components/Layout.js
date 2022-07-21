@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Cart from "../components/Cart";
 import About from "../pages/About";
 import Shop from "../pages/Shop";
+import ProductDetail from "../pages/ProductDetail";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useState } from "react";
@@ -48,8 +49,12 @@ export default function Layout() {
                     setProductsDisplayed={setProductsDisplayed}
                     totalCartQuantity={totalCartQuantity}
                     setTotalCartQuantity={setTotalCartQuantity}
-                    />} 
+                    />}/> 
+                <Route 
+                    path="/shopping-cart/shop/:name" 
+                    element={<ProductDetail products={products}/>}
                 />
+
             </Routes>
             <Footer
                 filterBy={filterBy}
