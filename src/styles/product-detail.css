@@ -71,3 +71,21 @@
     color: rgb(207, 76, 0);
     transition: .3s;
   }
+
+  @media only screen and (max-width: 1000px) {
+    .product-container .image img {
+        width: 250px;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .product-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-container .text {
+        padding: 10px;
+        border: 2px solid black;
+    }
+  }
