@@ -57,6 +57,7 @@ export default function Footer(props) {
             </div>
             <div className="contact column">
                 <h2>Contact</h2>
+                <p> <a href="https://github.com/corbincargil" target="_blank" rel="noopener noreferrer">Github</a></p>
                 <span>corbin.cargil@gmail.com</span>
             </div>
         </div>
