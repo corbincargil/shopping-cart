@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 export default function Cart(props) {
     const {cartItems, setCartItems, totalCartQuantity, setTotalCartQuantity} = props;
     
-    
+    function clearCart() {
+        setTotalCartQuantity(0);
+        setCartItems([]);
+    }
 
     return (
       <div className="cart-background">
@@ -35,7 +38,7 @@ export default function Cart(props) {
                 }
                 </ul>
                 <Link to={`/shopping-cart/checkout`}>
-                    <button className="checkout">Checkout</button>
+                    <button className="checkout" onClick={clearCart}>Checkout</button>
                 </Link>
             </div>
       </div>
