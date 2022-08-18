@@ -1,14 +1,27 @@
 import React from "react";
 import CartItem from "./CartItem";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 
 export default function Cart(props) {
     const {cartItems, setCartItems, totalCartQuantity, setTotalCartQuantity} = props;
+    const navigate = useNavigate();
+    let cartIsEmpty = true;
+    
+    if (totalCartQuantity > 0) {
+        cartIsEmpty = true;
+    } else {
+        cartIsEmpty = false;
+    }
     
     function clearCart() {
         setTotalCartQuantity(0);
         setCartItems([]);
+    }
+
+    function processCheckout() {
+        clearCart();
+        navigate('/shopping-cart/checkout');
     }
 
     return (
@@ -37,9 +50,9 @@ export default function Cart(props) {
                 ))
                 }
                 </ul>
-                <Link to={`/shopping-cart/checkout`}>
-                    <button className="checkout" onClick={clearCart}>Checkout</button>
-                </Link>
+                
+                    <button className="checkout-button" onClick={processCheckout}disabled={cartIsEmpty ? false : true}>Checkout</button>
+                
             </div>
       </div>
     );

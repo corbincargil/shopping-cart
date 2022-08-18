@@ -332,7 +332,11 @@ button.remove-button:hover {
   width: 100px;
   height: auto;
 }
-
+                                        /* CHECKOUT */
+.checkout {
+  background-color: rgba(74, 184, 74, 0.673);
+  color: rgb(0, 67, 0);
+}
                                         /* MEDIA QUERIES */
 
 @media only screen and (max-width: 1210px) {

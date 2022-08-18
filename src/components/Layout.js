@@ -61,7 +61,7 @@ export default function Layout() {
                 />
                 <Route
                 path="/shopping-cart/checkout"
-                element={<Checkout/>}
+                element={<Checkout totalCartQuantity={totalCartQuantity}/>}
                 />
 
             </Routes>
