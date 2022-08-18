@@ -7,6 +7,7 @@ import Shop from "../pages/Shop";
 import ProductDetail from "../pages/ProductDetail";
 import Header from "./Header";
 import Footer from "./Footer";
+import Checkout from "./Checkout";
 import { useState } from "react";
 import { products } from "../util/products";
 
@@ -49,7 +50,7 @@ export default function Layout() {
                     setProductsDisplayed={setProductsDisplayed}
                     totalCartQuantity={totalCartQuantity}
                     setTotalCartQuantity={setTotalCartQuantity}
-                    />}/> 
+                />}/> 
                 <Route 
                     path="/shopping-cart/shop/:name" 
                     element={<ProductDetail 
@@ -57,6 +58,10 @@ export default function Layout() {
                                 setTotalCartQuantity={setTotalCartQuantity}
                                 setCartItems={setCartItems}
                                 products={products}/>}
+                />
+                <Route
+                path="/shopping-cart/checkout"
+                element={<Checkout/>}
                 />
 
             </Routes>

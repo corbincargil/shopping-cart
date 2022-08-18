@@ -1,9 +1,13 @@
 import React from "react";
 import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
+
 
 export default function Cart(props) {
     const {cartItems, setCartItems, totalCartQuantity, setTotalCartQuantity} = props;
     
+    
+
     return (
       <div className="cart-background">
         <div className="cart-container">
@@ -30,6 +34,9 @@ export default function Cart(props) {
                 ))
                 }
                 </ul>
+                <Link to={`/shopping-cart/checkout`}>
+                    <button className="checkout">Checkout</button>
+                </Link>
             </div>
       </div>
     );
