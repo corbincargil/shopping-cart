@@ -1,5 +1,7 @@
 import React from "react";
 import { products } from "../util/products";
+import { Link } from "react-router-dom";
+
 
 export default function FeaturedItems() {
 
@@ -17,6 +19,7 @@ export default function FeaturedItems() {
                     <li 
                         className='featured product' 
                         key={product.id}>
+                        <Link to={`/shopping-cart/shop/${product.name}`}>
                         <div className="flip-container">
                             <div className="product-picture">
                                 <div className="front">
@@ -32,6 +35,7 @@ export default function FeaturedItems() {
                         <p className="description">{product.description}</p>
                         <p className="price">Price: ${product.price}</p>
                         <p className="new-price">${Math.floor(product.price*0.75)}.99</p>
+                        </Link>
                     </li>
                 ))
             }
