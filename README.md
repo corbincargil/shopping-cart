@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Shopping Cart Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description:
 
-## Available Scripts
+This is a mock online shopping website based on https://www.skatewarehouse.com that was built using React. Users can navigate the website, shop for different products based on brand or product type, add items to the cart, and "checkout" to submit their order. The primary goals of this project were to  1) practice using React Router to navigate to different pages on the site and 2) practice using hooks to manipulate state accross components (for example, allowing a user to add a product to their cart from the Shop page and have the added product and all its info appear on the Cart page). 
 
-In the project directory, you can run:
+## Live Preview: 
 
-### `npm start`
+Use this link to access a live preview of the game:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://corbincargil.github.io/shopping-cart/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Lessons Learned: 
+* How to implement React Router for website navigation with unique URL's
+* Apply State and Effect hooks to efficiently handle state between function components
+* Practice creating React function components
+* Practice planning/organizing folder & component structure for a project with multiple "layers", resulting in clean and easy to understand logic and flow of data
+* Practice with basic styling of React components
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Features: 
 
-### `npm run build`
+* Shop/sort products based on brand or type of product
+* Click on item to view larger picture and additional product info
+* Add items to cart from shop page or individual product page
+* View cart prior to check out (ability to change item quantity or remove items)
+* Checkout button that "submits" the order and resets the shopping cart
+* Navigate to different pages using React Router
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Screen Shot 2022-08-20 at 11 33 48 AM](https://user-images.githubusercontent.com/100732012/185757203-f393426f-6c39-4114-990d-67568b6cadf8.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screen Shot 2022-08-20 at 11 36 10 AM](https://user-images.githubusercontent.com/100732012/185757303-8bf12ded-1696-4ea0-a93d-20d687cc065e.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+![Screen Shot 2022-08-20 at 11 31 25 AM](https://user-images.githubusercontent.com/100732012/185757131-1545b304-324f-4ffc-9d46-fcdaf3c65883.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Screen Shot 2022-08-20 at 11 33 18 AM](https://user-images.githubusercontent.com/100732012/185757183-1c0fc792-5abc-42dc-92c7-c1f73e0f0b1d.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* React.js
+* HTML, CSS, JavaScript
+* Git, GitHub, & GH-Pages
+* Chrome dev. tools
+* MacOS Terminal
+* VS Code
+* Google & YouTube
