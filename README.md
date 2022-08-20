@@ -27,13 +27,17 @@ https://corbincargil.github.io/shopping-cart/
 * Checkout button that "submits" the order and resets the shopping cart
 * Navigate to different pages using React Router
 
+
+### `Shop page:`
 ![Screen Shot 2022-08-20 at 11 33 48 AM](https://user-images.githubusercontent.com/100732012/185757203-f393426f-6c39-4114-990d-67568b6cadf8.png)
 
+### `Individual item:`
 ![Screen Shot 2022-08-20 at 11 36 10 AM](https://user-images.githubusercontent.com/100732012/185757303-8bf12ded-1696-4ea0-a93d-20d687cc065e.png)
 
-
+### `The shopping cart:`
 ![Screen Shot 2022-08-20 at 11 31 25 AM](https://user-images.githubusercontent.com/100732012/185757131-1545b304-324f-4ffc-9d46-fcdaf3c65883.png)
 
+### `The Checkout page:`
 ![Screen Shot 2022-08-20 at 11 33 18 AM](https://user-images.githubusercontent.com/100732012/185757183-1c0fc792-5abc-42dc-92c7-c1f73e0f0b1d.png)
 
 ## Technologies Used:
