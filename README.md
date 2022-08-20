@@ -6,7 +6,7 @@ This is a mock online shopping website based on https://www.skatewarehouse.com t
 
 ## Live Preview: 
 
-Use this link to access a live preview of the game:
+Use this link to access a live preview of the site:
 
 https://corbincargil.github.io/shopping-cart/
 
