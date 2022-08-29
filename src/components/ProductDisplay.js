@@ -6,16 +6,23 @@ export default function ProductDisplay(props) {
     const {cartItems, setCartItems, totalCartQuantity, setTotalCartQuantity} = props;
 
     function addToCart(item) {
-        console.log(`aded to cart: ${item.name}`)
-        if (item.quantity >= 0) {
-            item.quantity++;
-            setTotalCartQuantity( totalCartQuantity + 1)
-        } else {
-            item.quantity = 1;
-            setCartItems(prevCart => [...prevCart, item])
-            setTotalCartQuantity( totalCartQuantity + 1)
+        let newItem = {...item};
+        function checkExists(existingItem) {
+            return existingItem.name === newItem.name;
         }
-        console.log(`item quantity: ${item.quantity}`)
+        let existingItem = cartItems.filter(checkExists);
+        existingItem = existingItem[0];
+        if (existingItem) {
+            existingItem.quantity++;
+            setTotalCartQuantity(totalCartQuantity + 1)
+            console.log(`increased existing item quantity: ${existingItem.name}`)
+            console.log(`new quantity is: ${existingItem.quantity}`)
+        } else {
+            newItem.quantity = 1;
+            setCartItems(prevCart => [...prevCart, newItem])
+            setTotalCartQuantity( totalCartQuantity + 1)
+            console.log(`added new item to cart: ${newItem.name}`)
+        }
     }
 
     return(
