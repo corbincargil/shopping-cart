@@ -19,7 +19,7 @@ export default function ProductDisplay(props) {
             console.log(`new quantity is: ${existingItem.quantity}`)
         } else {
             newItem.quantity = 1;
-            setCartItems(prevCart => [...prevCart, newItem])
+            setCartItems([...cartItems, newItem])
             setTotalCartQuantity( totalCartQuantity + 1)
             console.log(`added new item to cart: ${newItem.name}`)
         }

@@ -7,9 +7,8 @@ export default function CartItem(props) {
     const [quantity, setQuantity] = useState(productQuantity);
 
     function removeFromCart(currentItem) {
-        const newCart = cartItems.filter((item) => item.id != currentItem.id)
         console.log(`Removing from cart: ${currentItem}`)
-        setCartItems(newCart);
+        setCartItems(cartItems.filter((item) => item.id != currentItem.id));
         setTotalCartQuantity(totalCartQuantity - (quantity))
     }
 

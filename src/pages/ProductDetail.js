@@ -1,25 +1,33 @@
 import { useParams } from "react-router-dom";
 import "../styles/product-detail.css";
 import starIcon from "../img/star.png";
+import CartItem from "../components/CartItem";
 
 
 export default function ProductDetail(props) {
-    const {products, setCartItems, totalCartQuantity, setTotalCartQuantity} = props;
+    const {products, cartItems, setCartItems, totalCartQuantity, setTotalCartQuantity} = props;
     let { name } = useParams();
 
     let product = products.find(product => name === product.name)
 
     function addToCart(item) {
-        console.log(`aded to cart: ${item.name}`)
-        if (item.quantity >= 0) {
-            item.quantity++;
-            setTotalCartQuantity( totalCartQuantity + 1)
-        } else {
-            item.quantity = 1;
-            setCartItems(prevCart => [...prevCart, item])
-            setTotalCartQuantity( totalCartQuantity + 1)
+        let newItem = {...item};
+        function checkExists(existingItem) {
+            return existingItem.name === newItem.name;
         }
-        console.log(`item quantity: ${item.quantity}`)
+        let existingItem = cartItems.filter(checkExists);
+        existingItem = existingItem[0];
+        if (existingItem) {
+            existingItem.quantity++;
+            setTotalCartQuantity(totalCartQuantity + 1)
+            console.log(`increased existing item quantity: ${existingItem.name}`)
+            console.log(`new quantity is: ${existingItem.quantity}`)
+        } else {
+            newItem.quantity = 1;
+            setCartItems([...cartItems, newItem])
+            setTotalCartQuantity( totalCartQuantity + 1)
+            console.log(`added new item to cart: ${newItem.name}`)
+        }
     }
 
     return(

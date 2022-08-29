@@ -56,6 +56,7 @@ export default function Layout() {
                     element={<ProductDetail 
                                 totalCartQuantity={totalCartQuantity}
                                 setTotalCartQuantity={setTotalCartQuantity}
+                                cartItems={cartItems}  
                                 setCartItems={setCartItems}
                                 products={products}/>}
                 />
