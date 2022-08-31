@@ -4,6 +4,8 @@ import Home from "../pages/Home";
 import Cart from "../components/Cart";
 import About from "../pages/About";
 import Shop from "../pages/Shop";
+import ProductNavigation from "./ProductNavigation";
+import ProductDisplay from "./ProductDisplay";
 import ProductDetail from "../pages/ProductDetail";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -39,18 +41,23 @@ export default function Layout() {
                 <Route path="/shopping-cart/" element={<Home />} />
                 <Route path="/shopping-cart/about" element={<About />} />
                 <Route path="/shopping-cart/shop" element={
-                    <Shop 
-                    cartItems={cartItems} 
-                    setCartItems={setCartItems}
-                    filterBy={filterBy}
-                    setFilterBy={setFilterBy}
-                    filterWord={filterWord}
-                    setFilterWord={setFilterWord}
-                    productsDisplayed={productsDisplayed}
-                    setProductsDisplayed={setProductsDisplayed}
-                    totalCartQuantity={totalCartQuantity}
-                    setTotalCartQuantity={setTotalCartQuantity}
-                />}/> 
+                    <Shop> 
+                        <ProductNavigation 
+                            filterBy={filterBy}
+                            setFilterBy={setFilterBy}
+                            filterWord={filterWord}
+                            setFilterWord={setFilterWord}
+                            setProductsDisplayed={setProductsDisplayed}
+                        />
+                        <ProductDisplay 
+                            productsDisplayed={productsDisplayed}
+                            cartItems={cartItems}
+                            setCartItems={setCartItems}
+                            totalCartQuantity={totalCartQuantity}
+                            setTotalCartQuantity={setTotalCartQuantity}
+                        />
+                    </Shop>}
+                /> 
                 <Route 
                     path="/shopping-cart/shop/:name" 
                     element={<ProductDetail 
